@@ -9,8 +9,11 @@ export default function Contact() {
         <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
         <p className="text-lg text-gray-700">
           Reach out to us at{" "}
-          <a href="mailto:info@example.com" className="text-blue-600">
-            info@example.com
+          <a
+            href="mailto:goldengatetherapist@gmail.com"
+            className="text-blue-600"
+          >
+            goldengatetherapist@gmail.com
           </a>
         </p>
       </div>
