@@ -11,7 +11,10 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-orange-500 p-4">
+    <nav
+      className="bg-gradient-to-r from-orange-500 to-red-500 p-4 shadow-lg"
+      style={{ background: "linear-gradient(to right, #FB6E4A, #E63946)" }}
+    >
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="text-white text-lg font-bold">
@@ -42,13 +45,22 @@ export default function Navbar() {
           <Link href="/" className="text-white hover:text-gray-200">
             Home
           </Link>
-          <Link href="/about" className="text-white hover:text-gray-200">
+          <Link
+            href="/about"
+            className="text-white font-medium hover:text-yellow-100"
+          >
             About
           </Link>
-          <Link href="/services" className="text-white hover:text-gray-200">
+          <Link
+            href="/services"
+            className="text-white font-medium hover:text-yellow-100"
+          >
             Services
           </Link>
-          <Link href="/contact" className="text-white hover:text-gray-200">
+          <Link
+            href="/contact"
+            className="text-white font-medium hover:text-yellow-100"
+          >
             Contact
           </Link>
         </div>
