@@ -20,7 +20,7 @@ export default async function About() {
       >
         <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">About Us</h1>
+            <h1 className="text-4xl font-bold text-gray-800 mb-4">About</h1>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Image Section */}

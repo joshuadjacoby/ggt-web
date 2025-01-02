@@ -13,7 +13,7 @@ export default function Contact() {
         }}
       >
         <div className="container mx-auto py-20 text-center">
-          <h1 className="text-4xl text-gray-800 font-bold mb-4">Contact Us</h1>
+          <h1 className="text-4xl text-gray-800 font-bold mb-4">Contact</h1>
           <p className="text-lg text-gray-700">
             Reach out to us at{" "}
             <a
