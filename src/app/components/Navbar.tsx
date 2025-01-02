@@ -17,13 +17,9 @@ export default function Navbar() {
     >
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <Link
-          href="/"
-          className="text-white text-lg font-extrabold tracking-wide"
-        >
+        <Link href="/" className="text-white text-lg font-bold">
           Golden Gate Therapy
         </Link>
-
         {/* Hamburger Menu Button */}
         <button
           className="text-white lg:hidden focus:outline-none"
@@ -44,13 +40,9 @@ export default function Navbar() {
             ></path>
           </svg>
         </button>
-
         {/* Links for larger screens */}
-        <div className="hidden lg:flex space-x-6">
-          <Link
-            href="/"
-            className="text-white font-medium hover:text-yellow-100"
-          >
+        <div className="hidden lg:flex space-x-4">
+          <Link href="/" className="text-white hover:text-gray-200">
             Home
           </Link>
           <Link
@@ -73,31 +65,24 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
-
       {/* Dropdown menu for smaller screens */}
       {isMenuOpen && (
-        <div className="lg:hidden mt-3 space-y-2 text-center">
-          <Link
-            href="/"
-            className="block text-white font-medium hover:text-yellow-100"
-          >
+        <div className="lg:hidden mt-2 space-y-2">
+          <Link href="/" className="block text-white hover:text-gray-200">
             Home
           </Link>
-          <Link
-            href="/about"
-            className="block text-white font-medium hover:text-yellow-100"
-          >
+          <Link href="/about" className="block text-white hover:text-gray-200">
             About
           </Link>
           <Link
             href="/services"
-            className="block text-white font-medium hover:text-yellow-100"
+            className="block text-white hover:text-gray-200"
           >
             Services
           </Link>
           <Link
             href="/contact"
-            className="block text-white font-medium hover:text-yellow-100"
+            className="block text-white hover:text-gray-200"
           >
             Contact
           </Link>
