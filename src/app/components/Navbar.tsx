@@ -1,7 +1,7 @@
 "use client";
-
 import { useState } from "react";
-import Link from "next/link";
+
+type Path = "/" | "/about" | "/services" | "/contact";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,16 +10,23 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const navigateTo = (path: Path) => {
+    window.location.href = path;
+  };
+
   return (
     <nav
-      className="bg-gradient-to-r from-orange-500 to-red-500 p-4 shadow-lg"
+      className="bg-gradient-to-r from-orange-500 to-red-500 p-4 shadow-lg sticky top-0 z-50"
       style={{ background: "linear-gradient(to right, #FB6E4A, #E63946)" }}
     >
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="text-white text-lg font-bold">
+        <button
+          onClick={() => navigateTo("/")}
+          className="text-white text-lg font-bold"
+        >
           Golden Gate Therapy
-        </Link>
+        </button>
         {/* Hamburger Menu Button */}
         <button
           className="text-white lg:hidden focus:outline-none"
@@ -42,50 +49,59 @@ export default function Navbar() {
         </button>
         {/* Links for larger screens */}
         <div className="hidden lg:flex space-x-4">
-          <Link href="/" className="text-white hover:text-gray-200">
+          <button
+            onClick={() => navigateTo("/")}
+            className="text-white hover:text-gray-200"
+          >
             Home
-          </Link>
-          <Link
-            href="/about"
+          </button>
+          <button
+            onClick={() => navigateTo("/about")}
             className="text-white font-medium hover:text-yellow-100"
           >
             About
-          </Link>
-          <Link
-            href="/services"
+          </button>
+          <button
+            onClick={() => navigateTo("/services")}
             className="text-white font-medium hover:text-yellow-100"
           >
             Services
-          </Link>
-          <Link
-            href="/contact"
+          </button>
+          <button
+            onClick={() => navigateTo("/contact")}
             className="text-white font-medium hover:text-yellow-100"
           >
             Contact
-          </Link>
+          </button>
         </div>
       </div>
       {/* Dropdown menu for smaller screens */}
       {isMenuOpen && (
         <div className="lg:hidden mt-2 space-y-2">
-          <Link href="/" className="block text-white hover:text-gray-200">
+          <button
+            onClick={() => navigateTo("/")}
+            className="block text-white hover:text-gray-200"
+          >
             Home
-          </Link>
-          <Link href="/about" className="block text-white hover:text-gray-200">
+          </button>
+          <button
+            onClick={() => navigateTo("/about")}
+            className="block text-white hover:text-gray-200"
+          >
             About
-          </Link>
-          <Link
-            href="/services"
+          </button>
+          <button
+            onClick={() => navigateTo("/services")}
             className="block text-white hover:text-gray-200"
           >
             Services
-          </Link>
-          <Link
-            href="/contact"
+          </button>
+          <button
+            onClick={() => navigateTo("/contact")}
             className="block text-white hover:text-gray-200"
           >
             Contact
-          </Link>
+          </button>
         </div>
       )}
     </nav>
