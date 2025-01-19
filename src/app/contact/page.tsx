@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useState, ChangeEvent, FormEvent } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
