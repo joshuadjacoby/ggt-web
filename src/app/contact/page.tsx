@@ -3,10 +3,11 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import emailjs from "emailjs-com"; // Import EmailJS
+import emailjs from "emailjs-com";
 import Image from "next/image";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-// Define the type for the form data
 interface FormData {
   first_name: string;
   last_name: string;
@@ -30,7 +31,17 @@ export default function Contact(): JSX.Element {
   };
 
   const handleSubmit = async (e: FormEvent): Promise<void> => {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault();
+
+    if (
+      !formData.first_name ||
+      !formData.last_name ||
+      !formData.email ||
+      !formData.message
+    ) {
+      toast.error("All fields are required! Please fill out all fields.");
+      return;
+    }
 
     try {
       const result = await emailjs.send(
@@ -41,19 +52,22 @@ export default function Contact(): JSX.Element {
       );
 
       if (result.text === "OK") {
-        alert("Message sent successfully!");
-        setFormData({ first_name: "", last_name: "", email: "", message: "" }); // Clear the form
+        toast.success("Message sent successfully!");
+        setFormData({ first_name: "", last_name: "", email: "", message: "" });
       } else {
-        alert("Message not sent. Please try again.");
+        toast.error("Message not sent. Please try again.");
       }
     } catch (error) {
       console.error("EmailJS Error:", error);
-      alert("Failed to send the message, please try again later.");
+      toast.error("Failed to send the message, please try again later.");
     }
   };
 
   return (
     <>
+      {/* Toast Container for displaying toast notifications */}
+      <ToastContainer />
+
       <Navbar />
       <div
         className="bg-gray-100"
