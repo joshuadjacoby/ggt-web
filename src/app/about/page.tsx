@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
@@ -36,6 +37,16 @@ export default function About() {
 
           {/* First Section: Logo and About GGT Text Side by Side */}
           <div className="flex flex-col lg:flex-row items-center justify-between mb-16 gap-8">
+            {/* Image Section */}
+            <div className="relative w-full lg:w-1/2 h-auto max-w-md md:max-w-lg mb-8 lg:mb-0">
+              <Image
+                src="/logo.png"
+                alt="About Logo"
+                layout="intrinsic"
+                width={600} // Adjust width as needed
+                height={600} // Adjust height as needed
+              />
+            </div>
             {/* Text Section */}
             <div className="w-full lg:w-1/2">
               <div className="bg-white p-6 rounded-lg shadow-md h-full">
@@ -55,16 +66,6 @@ export default function About() {
                   {aboutGGTImpact}
                 </p>
               </div>
-            </div>
-            {/* Image Section */}
-            <div className="relative w-full lg:w-1/2 h-auto max-w-md md:max-w-lg mb-8 lg:mb-0">
-              <Image
-                src="/logo.png"
-                alt="About Logo"
-                layout="intrinsic"
-                width={600} // Adjust width as needed
-                height={600} // Adjust height as needed
-              />
             </div>
           </div>
 

@@ -1,4 +1,5 @@
 "use client";
+
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
@@ -47,7 +48,7 @@ export default function Home() {
         </div>
 
         {/* Introduction Section */}
-        <div className="bg-white p-6 rounded-lg shadow-md mt-12 mx-4 sm:mx-0">
+        <div className="bg-white p-6 rounded-lg shadow-md mt-8 mx-4 sm:mx-0">
           <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-4">
             Solutions for Sustainability
           </h2>
