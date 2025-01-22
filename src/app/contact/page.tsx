@@ -47,7 +47,7 @@ export default function Contact() {
       const result = await emailjs.send(
         "service_tldiyls",
         "template_qzfrvvp",
-        { to_name: "Brigit", ...formData },
+        { ...formData },
         "ESJuALi_woGqpuAJe",
       );
 
@@ -88,10 +88,10 @@ export default function Contact() {
             <p className="text-lg text-gray-700">
               <strong>Email:</strong>{" "}
               <a
-                href="mailto:goldengatetherapist@gmail.com"
+                href="mailto:brigit@goldengatetherapy.com"
                 className="text-blue-600"
               >
-                goldengatetherapist@gmail.com
+                brigit@goldengatetherapy.com
               </a>
             </p>
             <p className="text-lg text-gray-700">
