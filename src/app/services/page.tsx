@@ -32,7 +32,7 @@ export default function Services() {
                   src="/expectations.png"
                   alt="Expectations"
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contain"
                   objectPosition="center"
                 />
               </div>
@@ -43,7 +43,7 @@ export default function Services() {
                   src="/expectations_vertical.png"
                   alt="Expectations Mobile"
                   layout="fill"
-                  objectFit="contain" // This will zoom out the image to fit the container without cutting it off
+                  objectFit="contain"
                   objectPosition="center"
                 />
               </div>
