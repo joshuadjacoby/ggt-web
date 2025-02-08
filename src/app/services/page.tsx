@@ -24,15 +24,29 @@ export default function Services() {
               What to Expect
             </h2>
 
-            {/* Image Section - Full Width */}
-            <div className="relative w-full h-80 md:h-[400px] mb-12">
-              <Image
-                src="/expectations.png"
-                alt="Expectations"
-                layout="intrinsic"
-                width={1200} // Adjust width to match your image dimensions
-                height={400} // Adjust height as needed
-              />
+            {/* Image Section - Full Width with Responsive Support */}
+            <div className="relative w-full mb-12">
+              {/* Desktop Image */}
+              <div className="relative w-full h-[400px] hidden sm:block">
+                <Image
+                  src="/expectations.png"
+                  alt="Expectations"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                />
+              </div>
+
+              {/* Mobile Image with Zoom-Out Effect */}
+              <div className="relative w-full h-[600px] sm:hidden">
+                <Image
+                  src="/expectations_vertical.png"
+                  alt="Expectations Mobile"
+                  layout="fill"
+                  objectFit="contain" // This will zoom out the image to fit the container without cutting it off
+                  objectPosition="center"
+                />
+              </div>
             </div>
           </div>
 
