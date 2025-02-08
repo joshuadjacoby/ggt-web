@@ -68,13 +68,13 @@ export default function Services() {
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed whitespace-pre-line mb-4">
               <span className="font-bold">Initial Consultation Call</span> - 15
-              min, <span className="font-bold text-green-500">$0</span>
+              min, <span className="font-bold text-[#F14F45]">$0</span>
             </p>
             <p className="font-bold text-lg text-gray-700 mb-4">Purpose:</p>
             {/* Purpose List */}
             <ul className="list-disc pl-6 text-gray-700 mb-6">
               <li>To determine right fit, or if a referral is needed</li>
-              <li>Retrieve contact info</li>
+              <li>Retrieve contact info, email electronic consent forms</li>
               <li>
                 To schedule first home visit, parent visit and dependent-only
                 visit
@@ -86,19 +86,19 @@ export default function Services() {
             <div className="space-y-4 mb-6">
               <p className="text-lg text-gray-700">
                 <span className="font-bold">First Home Visit</span> - 75 min,{" "}
-                <span className="font-bold text-green-500">$450</span>
+                <span className="font-bold text-[#F14F45]">$450</span>
               </p>
               <p className="text-lg text-gray-700">
                 <span className="font-bold">
                   Parent Visit (Virtual or In-Person)
                 </span>{" "}
-                - 50 min, <span className="font-bold text-green-500">$250</span>
+                - 50 min, <span className="font-bold text-[#F14F45]">$250</span>
               </p>
               <p className="text-lg text-gray-700">
                 <span className="font-bold">
                   Dependent Visit (Virtual or In-Person)
                 </span>{" "}
-                - 50 min, <span className="font-bold text-green-500">$250</span>
+                - 50 min, <span className="font-bold text-[#F14F45]">$250</span>
               </p>
             </div>
             <p className="text-lg text-gray-700 mb-4">
@@ -109,7 +109,7 @@ export default function Services() {
             <p className="text-lg text-gray-700">
               <span className="font-bold">Regular Follow-up Visits</span>{" "}
               (Virtual or In-person) - 50 min,{" "}
-              <span className="font-bold text-green-500">$250</span>
+              <span className="font-bold text-[#F14F45]">$250</span>
             </p>
           </div>
         </div>
