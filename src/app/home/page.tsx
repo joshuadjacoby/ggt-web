@@ -19,12 +19,21 @@ export default function Home() {
       <div className="relative">
         {/* Image Section */}
         <div className="relative w-full h-[85vh]">
+          {/* Default Image for larger screens */}
           <Image
             src="/family_home.png"
             alt="Family Home"
             layout="fill"
             objectFit="cover"
-            className="absolute inset-0"
+            className="absolute inset-0 hidden sm:block"
+          />
+          {/* Mobile Image for smaller screens */}
+          <Image
+            src="/family_home_mobile.png"
+            alt="Family Home"
+            layout="fill"
+            objectFit="cover"
+            className="absolute inset-0 sm:hidden"
           />
           {/* Title and Subtitle */}
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 px-4">
