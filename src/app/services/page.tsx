@@ -65,7 +65,7 @@ export default function Services() {
             <ul className="text-lg text-gray-700 space-y-2 mb-6">
               <li>Cognitive Behavioral Therapy (CBT)</li>
               <li>Play-based Therapy</li>
-              <li>Acceptance and Committment</li>
+              <li>Acceptance and Commitment Therapy</li>
               <li>Interpersonal Psychotherapy</li>
               <li>Humanistic Approach</li>
               <li>Social/Communication Skills</li>
