@@ -10,7 +10,7 @@ const quoteText = `â€œIf you put your mind to it, you can accomplish anything.â€
 export default function Home() {
   const router = useRouter();
   const handleClick = () => {
-    router.push("https://scheduler.zoom.us/brigit-jacoby/goldengatetherapy");
+    router.push("https://goldengatetherapy.clientsecure.me/request/service");
   };
 
   return (
