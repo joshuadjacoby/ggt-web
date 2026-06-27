@@ -12,12 +12,12 @@ export default function Contact() {
   return (
     <main>
       {/* Hero */}
-      <section className="bg-warm-cream py-20 lg:py-24">
+      <section className="bg-warm-cream py-10 sm:py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-xs font-medium tracking-widest text-sage-teal uppercase mb-6">
+          <p className="text-xs font-medium tracking-widest text-sage-teal uppercase mb-4">
             Free Consultation · No Commitment
           </p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold italic text-charcoal leading-tight mb-6">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold italic text-charcoal leading-tight mb-4 sm:mb-6">
             Let&apos;s talk.
           </h1>
           <p className="text-base sm:text-lg text-stone-gray leading-relaxed max-w-2xl mx-auto mb-10">

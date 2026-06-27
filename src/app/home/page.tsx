@@ -81,27 +81,27 @@ export default function Home() {
   return (
     <main>
       {/* Hero */}
-      <section className="bg-warm-cream py-20 lg:py-28">
+      <section className="bg-warm-cream py-10 sm:py-16 lg:py-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
-              <p className="text-xs font-medium tracking-widest text-sage-teal uppercase mb-6">
+              <p className="text-xs font-medium tracking-widest text-sage-teal uppercase mb-4">
                 Anxiety Therapist · Los Angeles · Virtual Throughout California
               </p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold italic text-charcoal leading-tight mb-6">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold italic text-charcoal leading-tight mb-4 sm:mb-6">
                 A space to stop performing and start living.
               </h1>
-              <p className="text-base sm:text-lg text-stone-gray leading-relaxed mb-4">
+              <p className="text-base sm:text-lg text-stone-gray leading-relaxed mb-3">
                 You&apos;ve worked hard to build a life that looks great from
                 the outside. But privately? There&apos;s a quiet, persistent hum
                 of anxiety that never quite goes away.
               </p>
-              <p className="text-base sm:text-lg text-stone-gray leading-relaxed mb-10">
+              <p className="text-base sm:text-lg text-stone-gray leading-relaxed mb-6 sm:mb-10">
                 I help high-achieving adults in Los Angeles untangle anxiety,
                 let go of people-pleasing patterns, and find the voice
                 they&apos;ve been keeping to themselves.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link href="/contact" className="btn-primary text-center">
                   Book a Free Consultation →
                 </Link>
@@ -110,9 +110,9 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className="relative flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-md">
-                <div className="absolute -inset-4 bg-soft-sage rounded-3xl -rotate-2" />
+            <div className="relative flex justify-center lg:justify-end mt-8 lg:mt-0">
+              <div className="relative w-full max-w-sm sm:max-w-md">
+                <div className="absolute -inset-2 lg:-inset-4 bg-soft-sage rounded-3xl -rotate-2" />
                 <Image
                   src="/brigit.png"
                   alt="Brigit Jacoby, LCSW — Anxiety therapist in Los Angeles"
@@ -128,7 +128,7 @@ export default function Home() {
       </section>
 
       {/* Recognition section */}
-      <section className="bg-soft-sage py-16 lg:py-20">
+      <section className="bg-soft-sage py-12 lg:py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl sm:text-4xl font-bold italic text-charcoal mb-4">
@@ -167,7 +167,7 @@ export default function Home() {
       </section>
 
       {/* What to expect */}
-      <section className="bg-white py-16 lg:py-20">
+      <section className="bg-white py-12 lg:py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold italic text-charcoal mb-4">
@@ -194,7 +194,7 @@ export default function Home() {
       </section>
 
       {/* Services preview */}
-      <section className="bg-warm-cream py-16 lg:py-20">
+      <section className="bg-warm-cream py-12 lg:py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold italic text-charcoal mb-4">
@@ -233,10 +233,10 @@ export default function Home() {
       </section>
 
       {/* About snippet */}
-      <section className="bg-white py-16 lg:py-20">
+      <section className="bg-white py-12 lg:py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="hidden lg:block relative">
               <Image
                 src="/brigit.png"
                 alt="Brigit Jacoby, Licensed Clinical Social Worker in Venice Beach"
@@ -276,7 +276,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-soft-sage py-16 lg:py-20">
+      <section className="bg-soft-sage py-12 lg:py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold italic text-charcoal mb-3">
