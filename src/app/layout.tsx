@@ -47,7 +47,7 @@ const jsonLd = {
   description:
     "Virtual therapy for high-achieving adults in California specializing in anxiety and people-pleasing.",
   url: "https://brigitjacoby.com",
-  telephone: "(415) 439-0499",
+  telephone: "(310) 561-1461",
   email: "brigit@goldengatetherapy.com",
   address: {
     "@type": "PostalAddress",
