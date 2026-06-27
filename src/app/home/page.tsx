@@ -9,6 +9,27 @@ export const metadata: Metadata = {
     "Virtual therapy for high-achieving adults in Los Angeles. Specializing in anxiety, people-pleasing, and authentic relationships. Book a free 20-minute consultation.",
 };
 
+const testimonials = [
+  {
+    quote:
+      "After over half a year of weekly appointments with Brigit, I will say that she has helped me with my mental health. From helping me process feelings through difficult times, helping me create healthier habits, or challenging me to get out of my comfort zone. Brigit is extremely understanding and is always helping me solve my problems!",
+    attribution: "Verified client, age 25–34",
+    detail: "36 sessions · Grow Therapy",
+  },
+  {
+    quote:
+      "I thought that she seemed very easy to communicate with openly and I find that inviting feeling to be important for individuals looking for therapy. She was very intelligent, positive, and creates a safe space easily.",
+    attribution: "Verified client, age 25–34",
+    detail: "Grow Therapy",
+  },
+  {
+    quote:
+      "She was very sweet and welcoming. Brigit seemed like she really wanted to get to the base of the problem and where to go from there. She was very genuine and willing to help me work through things.",
+    attribution: "Verified client, age 18–24",
+    detail: "Grow Therapy",
+  },
+];
+
 const recognitionItems = [
   "Feel chronically anxious — even when nothing is technically wrong",
   "Say yes automatically, then quietly resent it",
@@ -250,6 +271,41 @@ export default function Home() {
                 More About Me & My Approach →
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="bg-soft-sage py-16 lg:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold italic text-charcoal mb-3">
+              What clients say
+            </h2>
+            <p className="text-stone-gray text-sm">
+              4.9 rating · Verified reviews from Grow Therapy
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {testimonials.map(({ quote, attribution, detail }) => (
+              <div key={attribution + detail} className="bg-white rounded-2xl p-6 shadow-sm flex flex-col">
+                {/* Stars */}
+                <div className="flex gap-0.5 mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-charcoal text-sm leading-relaxed flex-1 mb-5">
+                  &ldquo;{quote}&rdquo;
+                </p>
+                <div>
+                  <p className="text-xs font-semibold text-charcoal">{attribution}</p>
+                  <p className="text-xs text-stone-gray">{detail}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
