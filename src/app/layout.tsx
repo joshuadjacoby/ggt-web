@@ -1,20 +1,69 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
-  title: "Golden Gate Therapy",
-  description: "Helping you achieve balance and well-being.",
+  metadataBase: new URL("https://brigitjacoby.com"),
+  title: {
+    default:
+      "Brigit Jacoby, LCSW | Anxiety Therapist in Los Angeles & Santa Monica",
+    template: "%s | Brigit Jacoby, LCSW",
+  },
+  description:
+    "Virtual therapy for high-achieving adults in Los Angeles. Specializing in anxiety, people-pleasing, and authentic relationships. Book a free 20-minute consultation.",
+  keywords: [
+    "anxiety therapist Los Angeles",
+    "therapist for high achievers",
+    "people-pleasing therapy Santa Monica",
+    "virtual therapy California",
+    "LCSW Santa Monica",
+    "therapy for anxiety Westside LA",
+    "boundaries therapist Los Angeles",
+    "high-functioning anxiety therapy",
+    "authentic relationships therapy",
+    "Brigit Jacoby LCSW",
+  ],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://brigitjacoby.com",
+    siteName: "Brigit Jacoby, LCSW",
+    title:
+      "Brigit Jacoby, LCSW | Anxiety Therapist in Los Angeles & Santa Monica",
+    description:
+      "Virtual therapy for high-achieving adults in Los Angeles. Specializing in anxiety, people-pleasing, and authentic relationships.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  name: "Brigit Jacoby, LCSW",
+  description:
+    "Virtual therapy for high-achieving adults in California specializing in anxiety and people-pleasing.",
+  url: "https://brigitjacoby.com",
+  telephone: "(310) 561-1461",
+  email: "brigit@goldengatetherapy.com",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Venice Beach",
+    addressRegion: "CA",
+    addressCountry: "US",
+  },
+  areaServed: "California",
+  priceRange: "$$",
+  medicalSpecialty: "Psychiatry",
+  founder: {
+    "@type": "Person",
+    name: "Brigit Jacoby",
+    jobTitle: "Licensed Clinical Social Worker",
+    hasCredential: "LCSW #121726",
+  },
 };
 
 export default function RootLayout({
@@ -24,10 +73,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
+      <body>
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

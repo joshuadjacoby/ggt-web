@@ -1,108 +1,186 @@
-"use client";
-
+import type { Metadata } from "next";
+import Link from "next/link";
 import Image from "next/image";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
-// Break down the about GGT text into smaller sections for better readability
-const aboutGGTIntro = `Golden Gate Therapy was established in April 2024 to provide high-quality psychotherapy services to children and their families.`;
-const aboutGGTMission = `Founder of Golden Gate Therapy, Brigit Jacoby, aims to work diligently with your family’s particular needs.`;
-const aboutGGTImportance = `Educators such as Teachers, Tutors, and Therapists are some of the first non-family members to interact with your child. In early stages of life, safety, belonging, and confidence are beginning to form in the child’s brain.`;
-const aboutGGTRelationships = `Interpersonal relationships, both family and non-family, are crucial for early development, including social skills such as trust, respect, and boundaries.`;
-const aboutGGTImpact = `For young people, every relationship is significant and important. This is where Golden Gate Therapy enters.`;
+export const metadata: Metadata = {
+  title: "About Brigit Jacoby, LCSW | Therapist for High Achievers",
+  description:
+    "Meet Brigit Jacoby, LCSW — a Licensed Clinical Social Worker in Venice Beach specializing in anxiety and people-pleasing therapy for high-achieving adults throughout California.",
+};
 
-// Break down the about Brigit text into smaller sections for better readability
-const aboutBrigitIntro = `Brigit Jacoby is a Licensed Clinical Social Worker living and working in the San Francisco Bay Area.`;
-const aboutBrigitEducation = `Brigit received her Masters of Social Work from the University of Southern California and graduated from the University of California, Irvine, with a B.A. in Psychology and Social Behavior.`;
-const aboutBrigitExperience = `While obtaining her undergraduate and graduate degrees, Brigit spent a lot of her time working with children as young as 2.5 years old to young adults in their 20s and their families, which inspired the creation of Golden Gate Therapy.`;
-const aboutBrigitPersonal = `In her personal time, Brigit enjoys spending time with her dog Marshall by walking to parks and exploring San Francisco with her husband.`;
+const issues = [
+  "Anxiety and high-functioning stress",
+  "People-pleasing and difficulty setting boundaries",
+  "Finding and using your authentic voice",
+  "Building deeper, more honest relationships",
+  "Perfectionism and fear of failure or judgment",
+  "Burnout and the loss of identity beyond achievement",
+];
+
+const credentials = [
+  "Licensed Clinical Social Worker (LCSW #121726) — California",
+  "Master of Social Work (MSW) — University of Southern California",
+  "B.A. in Psychology and Social Behavior — UC Irvine",
+  "Specialized training in anxiety, attachment, and relational therapy",
+  "Currently accepting new clients for virtual sessions throughout California",
+];
 
 export default function About() {
   return (
-    <>
-      <Navbar />
-      <div
-        className="bg-gray-100"
-        style={{
-          minHeight: "85vh",
-          background: "linear-gradient(to bottom, #E6E6E6, #F5F5F5)",
-        }}
-      >
-        <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">
-              About Golden Gate Therapy
-            </h1>
-          </div>
-
-          {/* First Section: Logo and About GGT Text Side by Side */}
-          <div className="flex flex-col lg:flex-row items-center justify-between mb-16 gap-8">
-            {/* Image Section */}
-            <div className="relative w-full lg:w-1/2 h-auto max-w-md md:max-w-lg mb-8 lg:mb-0">
-              <Image
-                src="/logo.png"
-                alt="About Logo"
-                layout="intrinsic"
-                width={600} // Adjust width as needed
-                height={600} // Adjust height as needed
-              />
+    <main>
+      {/* Page hero */}
+      <section className="bg-warm-cream py-20 lg:py-28">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <p className="text-xs font-medium tracking-widest text-sage-teal uppercase mb-6">
+                About Brigit
+              </p>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold italic text-charcoal leading-tight mb-6">
+                You don&apos;t have to perform here.
+              </h1>
+              <p className="text-base sm:text-lg text-stone-gray leading-relaxed mb-4">
+                That&apos;s the first thing I want you to know. Whatever version
+                of yourself you bring to our sessions — the put-together one,
+                the exhausted one, the one who doesn&apos;t have the right words
+                yet — is exactly the right one.
+              </p>
+              <p className="text-base sm:text-lg text-stone-gray leading-relaxed">
+                I became a therapist because I believe that the most meaningful
+                thing a person can do is learn to be honest — with themselves,
+                and with the people they love.
+              </p>
             </div>
-            {/* Text Section */}
-            <div className="w-full lg:w-1/2">
-              <div className="bg-white p-6 rounded-lg shadow-md h-full">
-                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-4">
-                  {aboutGGTIntro}
-                </p>
-                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-4">
-                  {aboutGGTMission}
-                </p>
-                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-4">
-                  {aboutGGTImportance}
-                </p>
-                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-4">
-                  {aboutGGTRelationships}
-                </p>
-                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8">
-                  {aboutGGTImpact}
-                </p>
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-md">
+                <div className="absolute -inset-4 bg-soft-sage rounded-3xl rotate-2" />
+                <Image
+                  src="/brigit.png"
+                  alt="Brigit Jacoby, LCSW — Licensed Clinical Social Worker in Venice Beach"
+                  width={500}
+                  height={600}
+                  className="relative rounded-2xl shadow-xl object-cover w-full"
+                  priority
+                />
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Second Section: Brigit Image and About Brigit Text Side by Side */}
-          <div className="flex flex-col lg:flex-row items-center justify-between mb-16 gap-8">
-            {/* Image Section */}
-            <div className="relative w-full lg:w-1/2 h-auto max-w-md md:max-w-lg mb-8 lg:mb-0">
-              <Image
-                src="/brigit.png"
-                alt="Brigit Jacoby"
-                layout="intrinsic"
-                width={600} // Adjust width as needed
-                height={600} // Adjust height as needed
-                className="rounded-lg shadow-lg"
-              />
+      {/* Who I work with */}
+      <section className="bg-white py-16 lg:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold italic text-charcoal mb-6">
+                Who I work with
+              </h2>
+              <p className="text-stone-gray leading-relaxed mb-4">
+                I specialize in working with high-achieving adults —
+                professionals, creatives, entrepreneurs, and anyone who has
+                mastered the art of seeming fine. My clients are smart,
+                self-aware, and often their own harshest critics.
+              </p>
+              <p className="text-stone-gray leading-relaxed mb-8">
+                They come to therapy not because they&apos;re falling apart, but
+                because something quieter is happening: a growing disconnection
+                between who they are and how they&apos;re living.
+              </p>
+              <h3 className="text-sm font-semibold uppercase tracking-widest text-charcoal mb-4">
+                Issues I most often work with:
+              </h3>
+              <ul className="space-y-3">
+                {issues.map((issue) => (
+                  <li key={issue} className="flex items-start gap-3">
+                    <span className="mt-1.5 flex-shrink-0 w-2 h-2 rounded-full bg-sage-teal" />
+                    <span className="text-stone-gray text-sm leading-relaxed">
+                      {issue}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            {/* Text Section */}
-            <div className="w-full lg:w-1/2">
-              <div className="bg-white p-6 rounded-lg shadow-md h-full">
-                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-4">
-                  {aboutBrigitIntro}
+
+            <div>
+              <div className="bg-soft-sage rounded-2xl p-8">
+                <h2 className="text-2xl font-bold italic text-charcoal mb-5">
+                  My approach
+                </h2>
+                <p className="text-charcoal/80 leading-relaxed mb-4">
+                  I draw from a range of evidence-based modalities — including
+                  Cognitive Behavioral Therapy (CBT), Acceptance and Commitment
+                  Therapy (ACT), and attachment-based approaches — but what I
+                  care about most is creating a relationship with you that feels
+                  real.
                 </p>
-                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-4">
-                  {aboutBrigitEducation}
+                <p className="text-charcoal/80 leading-relaxed mb-4">
+                  Therapy works when you feel safe enough to be honest, so
+                  that&apos;s always where we start.
                 </p>
-                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-4">
-                  {aboutBrigitExperience}
-                </p>
-                <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8">
-                  {aboutBrigitPersonal}
+                <p className="text-charcoal/80 leading-relaxed">
+                  Sessions are virtual, which means you can show up from
+                  wherever you&apos;re most comfortable — your home, your
+                  office, your car in a parking lot between meetings. No
+                  commute. No waiting room. Just space for you.
                 </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <Footer />
-    </>
+      </section>
+
+      {/* Credentials */}
+      <section className="bg-warm-cream py-16 lg:py-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold italic text-charcoal mb-8 text-center">
+            Credentials
+          </h2>
+          <div className="bg-white rounded-2xl p-8 shadow-sm">
+            <ul className="space-y-4">
+              {credentials.map((cred) => (
+                <li key={cred} className="flex items-start gap-4">
+                  <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-soft-sage flex items-center justify-center">
+                    <svg
+                      className="w-3 h-3 text-sage-teal"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={3}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </span>
+                  <span className="text-charcoal text-sm leading-relaxed">
+                    {cred}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-deep-teal py-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold italic text-white mb-5">
+            I&apos;d love to connect.
+          </h2>
+          <p className="text-white/80 text-lg leading-relaxed mb-8">
+            If anything on this page resonated with you, that&apos;s usually a
+            sign worth listening to. Reach out — there&apos;s no pressure, no
+            commitment.
+          </p>
+          <Link href="/contact" className="btn-white">
+            Schedule a Free Consultation →
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }

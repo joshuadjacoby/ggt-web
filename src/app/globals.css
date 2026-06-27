@@ -3,19 +3,34 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --sage-teal: #1d9e75;
+  --deep-teal: #0f6e56;
+  --soft-sage: #e1f5ee;
+  --warm-cream: #f7f5f0;
+  --charcoal: #2c2c2a;
+  --stone-gray: #888780;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--charcoal);
+  background: var(--warm-cream);
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block bg-sage-teal text-white font-medium py-3 px-7 rounded-full hover:bg-deep-teal transition-colors duration-200 text-sm tracking-wide;
+  }
+  .btn-outline {
+    @apply inline-block border border-charcoal text-charcoal font-medium py-3 px-7 rounded-full hover:bg-charcoal hover:text-white transition-colors duration-200 text-sm tracking-wide;
+  }
+  .btn-white {
+    @apply inline-block bg-white text-deep-teal font-medium py-3 px-7 rounded-full hover:bg-soft-sage transition-colors duration-200 text-sm tracking-wide;
+  }
 }
