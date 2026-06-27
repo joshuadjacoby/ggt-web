@@ -1,164 +1,275 @@
-"use client";
-
-import { useRouter } from "next/navigation";
+import type { Metadata } from "next";
+import Link from "next/link";
 import Image from "next/image";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
-const quoteText = `“If you put your mind to it, you can accomplish anything.” - Doc Emmet Brown`;
+export const metadata: Metadata = {
+  title:
+    "Brigit Jacoby, LCSW | Anxiety Therapist in Los Angeles & Santa Monica",
+  description:
+    "Virtual therapy for high-achieving adults in Los Angeles. Specializing in anxiety, people-pleasing, and authentic relationships. Book a free 20-minute consultation.",
+};
+
+const recognitionItems = [
+  "Feel chronically anxious — even when nothing is technically wrong",
+  "Say yes automatically, then quietly resent it",
+  "Worry that people only love the version of you that has it together",
+  "Have a hard time asking for what you need without guilt",
+  "Want deeper, more honest relationships — but don't know how to let people in",
+  "Are tired of feeling like a guest in your own life",
+];
+
+const expectations = [
+  {
+    title: "Honest & Warm",
+    body: "A judgment-free space where you can show up exactly as you are — the put-together version, the exhausted one, or the one without the right words yet.",
+  },
+  {
+    title: "Evidence-Based",
+    body: "Sessions draw from CBT, Acceptance and Commitment Therapy, and attachment-based approaches — tailored to you, not cookie-cutter.",
+  },
+  {
+    title: "Fully Virtual",
+    body: "Sessions from wherever you're most comfortable — your home, your car, your office. No commute, no waiting room, just space for you.",
+  },
+];
+
+const services = [
+  {
+    title: "Anxiety & High-Functioning Stress",
+    body: "For the person who can't slow down, over-prepares for everything, and always feels like the other shoe is about to drop.",
+    href: "/services#anxiety",
+  },
+  {
+    title: "People-Pleasing & Boundaries",
+    body: "For the person who's spent years making sure everyone else is okay — at the expense of their own needs and sense of self.",
+    href: "/services#people-pleasing",
+  },
+  {
+    title: "Finding Your Authentic Voice",
+    body: "For the person who's excellent at communicating — but struggles to speak honestly about what they feel or what they need.",
+    href: "/services#voice",
+  },
+  {
+    title: "Relationships & Intimacy",
+    body: "For the person who craves deeper connection but finds that truly being known feels like a risk they're not ready to take.",
+    href: "/services#relationships",
+  },
+];
 
 export default function Home() {
-  const router = useRouter();
-  const handleClick = () => {
-    router.push("https://goldengatetherapy.clientsecure.me/request/service");
-  };
-
   return (
-    <div className="bg-gray-800">
-      <Navbar />
-      <div className="relative">
-        {/* Image Section */}
-        <div className="relative w-full h-[85vh]">
-          {/* Default Image for larger screens */}
-          <Image
-            src="/family_home.png"
-            alt="Family Home"
-            layout="fill"
-            objectFit="cover"
-            className="absolute inset-0 hidden sm:block"
-          />
-          {/* Mobile Image for smaller screens */}
-          <Image
-            src="/family_home_mobile.png"
-            alt="Family Home"
-            layout="fill"
-            objectFit="cover"
-            className="absolute inset-0 sm:hidden"
-          />
-          {/* Title and Subtitle */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 px-4">
-            <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
-              Welcome to Golden Gate Therapy
-            </h1>
-            <p className="text-lg sm:text-xl text-white mb-8 text-center">
-              Helping you achieve balance and well-being.
-            </p>
-            <button
-              className="bg-red-600 text-white py-2 px-6 rounded hover:bg-red-700 text-sm sm:text-base"
-              onClick={handleClick}
-            >
-              Get Started
-            </button>
+    <main>
+      {/* Hero */}
+      <section className="bg-warm-cream py-20 lg:py-28">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <p className="text-xs font-medium tracking-widest text-sage-teal uppercase mb-6">
+                Anxiety Therapist · Los Angeles · Virtual Throughout California
+              </p>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold italic text-charcoal leading-tight mb-6">
+                A space to stop performing and start living.
+              </h1>
+              <p className="text-base sm:text-lg text-stone-gray leading-relaxed mb-4">
+                You&apos;ve worked hard to build a life that looks great from
+                the outside. But privately? There&apos;s a quiet, persistent hum
+                of anxiety that never quite goes away.
+              </p>
+              <p className="text-base sm:text-lg text-stone-gray leading-relaxed mb-10">
+                I help high-achieving adults in Los Angeles untangle anxiety,
+                let go of people-pleasing patterns, and find the voice
+                they&apos;ve been keeping to themselves.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/contact" className="btn-primary text-center">
+                  Book a Free Consultation →
+                </Link>
+                <Link href="/about" className="btn-outline text-center">
+                  Learn More About Working Together
+                </Link>
+              </div>
+            </div>
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-md">
+                <div className="absolute -inset-4 bg-soft-sage rounded-3xl -rotate-2" />
+                <Image
+                  src="/brigit.png"
+                  alt="Brigit Jacoby, LCSW — Anxiety therapist in Los Angeles"
+                  width={500}
+                  height={600}
+                  className="relative rounded-2xl shadow-xl object-cover w-full"
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Solutions for Sustainability Section */}
-        <div className="flex flex-col sm:flex-row justify-between items-center bg-white p-4 sm:p-6 rounded-lg shadow-md mt-8 mx-4 sm:mx-0">
-          <div className="w-full sm:w-1/2 p-4">
-            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-              <strong>Virtual and In-Home Services</strong> available throughout
-              California.
-            </p>
+      {/* Recognition section */}
+      <section className="bg-soft-sage py-16 lg:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl sm:text-4xl font-bold italic text-charcoal mb-4">
+              This might be the right fit if you...
+            </h2>
           </div>
-          <div className="w-full sm:w-1/2 p-4">
-            <Image
-              src="/boy_laptop.png"
-              alt="Virtual and In-Home Services"
-              width={400}
-              height={250}
-              objectFit="cover"
-            />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {recognitionItems.map((item, i) => (
+              <div
+                key={i}
+                className="bg-white rounded-xl p-5 shadow-sm flex items-start gap-3"
+              >
+                <span className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-sage-teal flex items-center justify-center">
+                  <svg
+                    className="w-3 h-3 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={3}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </span>
+                <p className="text-sm text-charcoal leading-relaxed">{item}</p>
+              </div>
+            ))}
           </div>
+          <p className="text-center text-lg font-medium text-deep-teal mt-8">
+            If that sounds familiar, you&apos;re in the right place.
+          </p>
         </div>
+      </section>
 
-        {/* Routines and Stress Section */}
-        <div className="flex flex-col sm:flex-row-reverse justify-between items-center bg-gray-100 p-4 sm:p-6 rounded-lg shadow-md mt-8 mx-4 sm:mx-0">
-          <div className="w-full sm:w-1/2 p-4">
-            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-              <strong>Routines</strong> break, <strong>meltdowns</strong>{" "}
-              happen, and <strong>stress</strong> is induced for everyone
-              involved.
-            </p>
-          </div>
-          <div className="w-full sm:w-1/2 p-4">
-            <Image
-              src="/screaming.png"
-              alt="Routines and Stress"
-              width={400}
-              height={250}
-              objectFit="cover"
-            />
-          </div>
-        </div>
-
-        {/* Changes in Family Dynamics Section */}
-        <div className="flex flex-col sm:flex-row justify-between items-center bg-white p-4 sm:p-6 rounded-lg shadow-md mt-8 mx-4 sm:mx-0">
-          <div className="w-full sm:w-1/2 p-4">
-            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-              <strong>This is where I come in!</strong> Changes in family
-              dynamics are a source of information and insight into the root of
-              a problem or a potential solution.
-            </p>
-          </div>
-          <div className="w-full sm:w-1/2 p-4">
-            <Image
-              src="/family_table.png"
-              alt="Changes in Family Dynamics"
-              width={400}
-              height={250}
-              objectFit="cover"
-            />
-          </div>
-        </div>
-
-        {/* Embrace Change and Resilience Section */}
-        <div className="flex flex-col sm:flex-row-reverse justify-between items-center bg-gray-100 p-4 sm:p-6 rounded-lg shadow-md mt-8 mx-4 sm:mx-0">
-          <div className="w-full sm:w-1/2 p-4">
-            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-              I am here to help you <strong>embrace change</strong> as we
-              <strong> uncover resiliency</strong> all while dealing with
-              feelings of <strong>shame</strong>, <strong>discomfort</strong>,
-              and <strong>guilt</strong>.
+      {/* What to expect */}
+      <section className="bg-white py-16 lg:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold italic text-charcoal mb-4">
+              What you can expect
+            </h2>
+            <p className="text-stone-gray max-w-xl mx-auto">
+              Therapy with me is conversational, collaborative, and grounded in
+              evidence. You won&apos;t be handed a worksheet and sent on your
+              way.
             </p>
           </div>
-          <div className="w-full sm:w-1/2 p-4">
-            <Image
-              src="/counseling.png"
-              alt="Embrace Change and Resilience"
-              width={400}
-              height={250}
-              objectFit="cover"
-            />
+          <div className="grid md:grid-cols-3 gap-6">
+            {expectations.map(({ title, body }) => (
+              <div key={title} className="border border-gray-100 rounded-2xl p-6">
+                <div className="w-8 h-1 bg-sage-teal rounded mb-4" />
+                <h3 className="font-semibold text-charcoal text-lg mb-3">
+                  {title}
+                </h3>
+                <p className="text-stone-gray text-sm leading-relaxed">{body}</p>
+              </div>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Strength-based Approach Section */}
-        <div className="flex flex-col sm:flex-row justify-between items-center bg-white p-4 sm:p-6 rounded-lg shadow-md mt-8 mx-4 sm:mx-0">
-          <div className="w-full sm:w-1/2 p-4">
-            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-              Using a <strong>Strength-based approach</strong>, your goals and
-              hopes for the future are much closer than you think!
+      {/* Services preview */}
+      <section className="bg-warm-cream py-16 lg:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold italic text-charcoal mb-4">
+              How I can help
+            </h2>
+            <p className="text-stone-gray max-w-xl mx-auto">
+              Individual therapy for adults throughout California via secure,
+              confidential video sessions.
             </p>
           </div>
-          <div className="w-full sm:w-1/2 p-4">
-            <Image
-              src="/strength.png"
-              alt="Strength-based Approach"
-              width={400}
-              height={250}
-              objectFit="cover"
-            />
+          <div className="grid sm:grid-cols-2 gap-5">
+            {services.map(({ title, body, href }) => (
+              <Link
+                key={title}
+                href={href}
+                className="group bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <h3 className="font-semibold text-charcoal text-lg mb-2 group-hover:text-sage-teal transition-colors">
+                  {title}
+                </h3>
+                <p className="text-stone-gray text-sm leading-relaxed mb-4">
+                  {body}
+                </p>
+                <span className="text-sage-teal text-xs font-medium tracking-wide">
+                  Learn more →
+                </span>
+              </Link>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link href="/services" className="btn-outline">
+              View All Services
+            </Link>
           </div>
         </div>
+      </section>
 
-        {/* Quote Section */}
-        <div className="bg-white p-6 rounded-lg shadow-md mt-8 mx-4 sm:mx-0">
-          <blockquote className="text-lg sm:text-2xl text-gray-900 italic font-semibold border-l-4 border-red-600 pl-4">
-            {quoteText}
-          </blockquote>
+      {/* About snippet */}
+      <section className="bg-white py-16 lg:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <Image
+                src="/brigit.png"
+                alt="Brigit Jacoby, Licensed Clinical Social Worker in Venice Beach"
+                width={480}
+                height={560}
+                className="rounded-2xl shadow-lg object-cover w-full"
+              />
+            </div>
+            <div>
+              <p className="text-xs font-medium tracking-widest text-sage-teal uppercase mb-4">
+                About Brigit
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-bold italic text-charcoal mb-5">
+                Hi, I&apos;m Brigit.
+              </h2>
+              <p className="text-stone-gray leading-relaxed mb-4">
+                I&apos;m a Licensed Clinical Social Worker based in Venice
+                Beach, and I work with high-achieving adults who are done
+                performing and ready to actually live.
+              </p>
+              <p className="text-stone-gray leading-relaxed mb-4">
+                My clients are smart, self-aware, and often their own harshest
+                critics. They come to therapy not because they&apos;re falling
+                apart, but because something quieter is happening: a growing
+                disconnection between who they are and how they&apos;re living.
+              </p>
+              <p className="text-stone-gray leading-relaxed mb-8">
+                Therapy works when you feel safe enough to be honest, so
+                that&apos;s always where we start.
+              </p>
+              <Link href="/about" className="btn-primary">
+                More About Me & My Approach →
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
-      <Footer />
-    </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="bg-deep-teal py-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold italic text-white mb-5">
+            Ready to take the first step?
+          </h2>
+          <p className="text-white/80 text-lg leading-relaxed mb-8">
+            A free 20-minute consultation is a relaxed, no-pressure
+            conversation. We&apos;ll talk about what&apos;s been going on for
+            you, how I work, and whether it feels like a match.
+          </p>
+          <Link href="/contact" className="btn-white">
+            Book Your Free Consultation →
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }

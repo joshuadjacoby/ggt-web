@@ -1,108 +1,92 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-type Path = "/" | "/about" | "/services" | "/contact";
+const links = [
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/contact", label: "Contact" },
+];
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const navigateTo = (path: Path) => {
-    window.location.href = path;
-  };
+  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
-    <nav
-      className="bg-gradient-to-r from-orange-500 to-red-500 p-4 shadow-lg sticky top-0 z-50"
-      style={{ background: "linear-gradient(to right, #FB6E4A, #E63946)" }}
-    >
-      <div className="container mx-auto flex justify-between items-center">
-        {/* Logo */}
-        <button
-          onClick={() => navigateTo("/")}
-          className="text-white text-lg font-bold"
-        >
-          Golden Gate Therapy
-        </button>
-        {/* Hamburger Menu Button */}
-        <button
-          className="text-white lg:hidden focus:outline-none"
-          onClick={toggleMenu}
-        >
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
-        </button>
-        {/* Links for larger screens */}
-        <div className="hidden lg:flex space-x-4">
+    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link href="/" className="flex flex-col leading-tight">
+            <span className="font-semibold text-charcoal text-base tracking-tight">
+              Brigit Jacoby
+            </span>
+            <span className="text-xs text-stone-gray tracking-widest uppercase">
+              LCSW · Therapist
+            </span>
+          </Link>
+
+          {/* Desktop nav */}
+          <div className="hidden md:flex items-center gap-8">
+            {links.map(({ href, label }) => (
+              <Link
+                key={href}
+                href={href}
+                className={`text-sm font-medium transition-colors duration-150 ${
+                  pathname === href
+                    ? "text-sage-teal"
+                    : "text-stone-gray hover:text-charcoal"
+                }`}
+              >
+                {label}
+              </Link>
+            ))}
+            <Link href="/contact" className="btn-primary">
+              Book a Free Consultation
+            </Link>
+          </div>
+
+          {/* Mobile hamburger */}
           <button
-            onClick={() => navigateTo("/")}
-            className="text-white hover:text-gray-200"
+            className="md:hidden p-2 text-charcoal"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
-            Home
-          </button>
-          <button
-            onClick={() => navigateTo("/about")}
-            className="text-white font-medium hover:text-yellow-100"
-          >
-            About
-          </button>
-          <button
-            onClick={() => navigateTo("/services")}
-            className="text-white font-medium hover:text-yellow-100"
-          >
-            Services
-          </button>
-          <button
-            onClick={() => navigateTo("/contact")}
-            className="text-white font-medium hover:text-yellow-100"
-          >
-            Contact
+            {isOpen ? (
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
       </div>
-      {/* Dropdown menu for smaller screens */}
-      {isMenuOpen && (
-        <div className="lg:hidden mt-2 space-y-2">
-          <button
-            onClick={() => navigateTo("/")}
-            className="block text-white hover:text-gray-200"
+
+      {/* Mobile menu */}
+      {isOpen && (
+        <div className="md:hidden bg-white border-t border-gray-100 px-4 py-4 space-y-3">
+          {links.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className="block text-sm font-medium text-charcoal py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              {label}
+            </Link>
+          ))}
+          <Link
+            href="/contact"
+            className="btn-primary block text-center mt-4"
+            onClick={() => setIsOpen(false)}
           >
-            Home
-          </button>
-          <button
-            onClick={() => navigateTo("/about")}
-            className="block text-white hover:text-gray-200"
-          >
-            About
-          </button>
-          <button
-            onClick={() => navigateTo("/services")}
-            className="block text-white hover:text-gray-200"
-          >
-            Services
-          </button>
-          <button
-            onClick={() => navigateTo("/contact")}
-            className="block text-white hover:text-gray-200"
-          >
-            Contact
-          </button>
+            Book a Free Consultation
+          </Link>
         </div>
       )}
     </nav>
