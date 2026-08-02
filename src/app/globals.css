@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --sage-teal: #1d9e75;
-  --deep-teal: #0f6e56;
-  --soft-sage: #e1f5ee;
+  --sage-teal: #c1613e;
+  --deep-teal: #2a3648;
+  --soft-sage: #f0e6dc;
   --warm-cream: #f7f5f0;
   --charcoal: #2c2c2a;
-  --stone-gray: #888780;
+  --stone-gray: #8a8073;
 }
 
 body {

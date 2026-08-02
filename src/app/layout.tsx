@@ -33,6 +33,7 @@ export const metadata: Metadata = {
       "Brigit Jacoby, LCSW | Anxiety Therapist in Los Angeles & Santa Monica",
     description:
       "Virtual therapy for high-achieving adults in Los Angeles. Specializing in anxiety, people-pleasing, and authentic relationships.",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -55,9 +56,18 @@ const jsonLd = {
     addressRegion: "CA",
     addressCountry: "US",
   },
-  areaServed: "California",
+  areaServed: [
+    { "@type": "City", name: "Venice Beach" },
+    { "@type": "City", name: "Santa Monica" },
+    { "@type": "City", name: "Marina del Rey" },
+    { "@type": "City", name: "Mar Vista" },
+    { "@type": "City", name: "Brentwood" },
+    { "@type": "City", name: "Los Angeles" },
+    { "@type": "State", name: "California" },
+  ],
   priceRange: "$$",
   medicalSpecialty: "Psychiatry",
+  sameAs: ["https://www.psychologytoday.com/profile/1352154"],
   founder: {
     "@type": "Person",
     name: "Brigit Jacoby",

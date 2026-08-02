@@ -1,11 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+const title =
+  "Therapy Services | Anxiety, People-Pleasing & Boundaries | Los Angeles";
+const description =
+  "Individual therapy for high-achieving adults. Brigit Jacoby, LCSW offers virtual sessions throughout California for anxiety, people-pleasing, boundaries, and authentic relationships.";
+
 export const metadata: Metadata = {
-  title:
-    "Therapy Services | Anxiety, People-Pleasing & Boundaries | Los Angeles",
-  description:
-    "Individual therapy for high-achieving adults. Brigit Jacoby, LCSW offers virtual sessions throughout California for anxiety, people-pleasing, boundaries, and authentic relationships.",
+  title,
+  description,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://brigitjacoby.com/services",
+    siteName: "Brigit Jacoby, LCSW",
+    title,
+    description,
+    images: ["/og-image.jpg"],
+  },
 };
 
 const services = [
@@ -54,7 +66,7 @@ export default function Services() {
       <section className="bg-warm-cream py-10 sm:py-16 lg:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xs font-medium tracking-widest text-sage-teal uppercase mb-4">
-            Individual Therapy · Virtual · Throughout California
+            Individual Therapy · Venice Beach · Virtual Throughout California
           </p>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold italic text-charcoal leading-tight mb-4 sm:mb-6">
             Therapy for high-achieving adults who are ready to stop performing
@@ -64,6 +76,15 @@ export default function Services() {
             I offer individual therapy for adults throughout California via
             secure, confidential video sessions. Every client is different, and
             your sessions will be shaped around you.
+          </p>
+          <p className="text-stone-gray text-sm mt-6">
+            I also work with teens and their families —{" "}
+            <Link
+              href="/teens"
+              className="text-sage-teal font-medium hover:underline"
+            >
+              learn more →
+            </Link>
           </p>
         </div>
       </section>

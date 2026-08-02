@@ -86,7 +86,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
               <p className="text-xs font-medium tracking-widest text-sage-teal uppercase mb-4">
-                Anxiety Therapist · Los Angeles · Virtual Throughout California
+                Anxiety Therapist · Venice Beach · Virtual Throughout California
               </p>
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold italic text-charcoal leading-tight mb-4 sm:mb-6">
                 A space to stop performing and start living.
@@ -114,10 +114,10 @@ export default function Home() {
               <div className="relative w-full max-w-sm sm:max-w-md">
                 <div className="absolute -inset-2 lg:-inset-4 bg-soft-sage rounded-3xl -rotate-2" />
                 <Image
-                  src="/brigit.png"
-                  alt="Brigit Jacoby, LCSW — Anxiety therapist in Los Angeles"
+                  src="/brigit-landing.jpg"
+                  alt="Brigit Jacoby, LCSW, anxiety therapist in Venice Beach, CA, smiling in a professional headshot"
                   width={500}
-                  height={600}
+                  height={750}
                   className="relative rounded-2xl shadow-xl object-cover w-full"
                   priority
                 />
@@ -238,10 +238,10 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="hidden lg:block relative">
               <Image
-                src="/brigit.png"
-                alt="Brigit Jacoby, Licensed Clinical Social Worker in Venice Beach"
+                src="/brigit-and-marshall.jpg"
+                alt="Brigit Jacoby, LCSW, Licensed Clinical Social Worker in Venice Beach, CA, with her dog, Marshall"
                 width={480}
-                height={560}
+                height={720}
                 className="rounded-2xl shadow-lg object-cover w-full"
               />
             </div>
