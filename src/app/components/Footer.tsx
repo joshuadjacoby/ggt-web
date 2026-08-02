@@ -12,7 +12,9 @@ export default function Footer() {
               Licensed Clinical Social Worker #121726
             </p>
             <p className="text-stone-gray text-sm leading-relaxed">
-              Virtual therapy for high-achieving adults throughout California.
+              Venice Beach therapist serving Santa Monica, Marina del Rey, Mar
+              Vista, Brentwood, and the LA Westside — plus virtual sessions
+              throughout California.
             </p>
           </div>
 
@@ -26,6 +28,7 @@ export default function Footer() {
                 { href: "/", label: "Home" },
                 { href: "/about", label: "About" },
                 { href: "/services", label: "Services" },
+                { href: "/teens", label: "Teens & Families" },
                 { href: "/contact", label: "Contact" },
               ].map(({ href, label }) => (
                 <li key={href}>
@@ -79,7 +82,10 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Brigit Jacoby, LCSW. All rights
             reserved.
           </p>
-          <p>Venice Beach, CA · Virtual throughout California</p>
+          <p>
+            Venice Beach, CA · Serving Santa Monica, Marina del Rey, Mar
+            Vista &amp; Brentwood · Virtual throughout California
+          </p>
         </div>
       </div>
     </footer>

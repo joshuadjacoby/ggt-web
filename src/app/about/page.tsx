@@ -2,10 +2,22 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
+const title = "About Brigit Jacoby, LCSW | Therapist for High Achievers";
+const description =
+  "Meet Brigit Jacoby, LCSW — a Licensed Clinical Social Worker in Venice Beach specializing in anxiety and people-pleasing therapy for high-achieving adults throughout California.";
+
 export const metadata: Metadata = {
-  title: "About Brigit Jacoby, LCSW | Therapist for High Achievers",
-  description:
-    "Meet Brigit Jacoby, LCSW — a Licensed Clinical Social Worker in Venice Beach specializing in anxiety and people-pleasing therapy for high-achieving adults throughout California.",
+  title,
+  description,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://brigitjacoby.com/about",
+    siteName: "Brigit Jacoby, LCSW",
+    title,
+    description,
+    images: ["/og-image.jpg"],
+  },
 };
 
 const issues = [
@@ -55,10 +67,10 @@ export default function About() {
               <div className="relative w-full max-w-sm sm:max-w-md">
                 <div className="absolute -inset-2 lg:-inset-4 bg-soft-sage rounded-3xl rotate-2" />
                 <Image
-                  src="/brigit.png"
-                  alt="Brigit Jacoby, LCSW — Licensed Clinical Social Worker in Venice Beach"
+                  src="/brigit-landing.jpg"
+                  alt="Brigit Jacoby, LCSW, Licensed Clinical Social Worker in Venice Beach, CA, smiling in a professional headshot"
                   width={500}
-                  height={600}
+                  height={750}
                   className="relative rounded-2xl shadow-xl object-cover w-full"
                   priority
                 />
@@ -100,6 +112,15 @@ export default function About() {
                   </li>
                 ))}
               </ul>
+              <p className="text-stone-gray text-sm leading-relaxed mt-6">
+                I also work with teens and their families.{" "}
+                <Link
+                  href="/teens"
+                  className="text-sage-teal font-medium hover:underline"
+                >
+                  Learn more →
+                </Link>
+              </p>
             </div>
 
             <div>
