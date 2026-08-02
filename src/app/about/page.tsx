@@ -67,8 +67,8 @@ export default function About() {
               <div className="relative w-full max-w-sm sm:max-w-md">
                 <div className="absolute -inset-2 lg:-inset-4 bg-soft-sage rounded-3xl rotate-2" />
                 <Image
-                  src="/brigit-landing.jpg"
-                  alt="Brigit Jacoby, LCSW, Licensed Clinical Social Worker in Venice Beach, CA, smiling in a professional headshot"
+                  src="/brigit-venice-canal.jpg"
+                  alt="Brigit Jacoby, LCSW, Licensed Clinical Social Worker, at the Venice canals in Venice Beach, CA"
                   width={500}
                   height={750}
                   className="relative rounded-2xl shadow-xl object-cover w-full"
@@ -148,24 +148,6 @@ export default function About() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Venice Beach */}
-      <section className="bg-soft-sage py-12 lg:py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden shadow-lg">
-            <Image
-              src="/brigit-venice-canal.jpg"
-              alt="Brigit Jacoby, LCSW, at the Venice canals in Venice Beach, CA"
-              fill
-              className="object-cover"
-              style={{ objectPosition: "50% 25%" }}
-            />
-          </div>
-          <p className="text-center text-stone-gray text-sm mt-4">
-            Venice Beach, CA
-          </p>
         </div>
       </section>
 
