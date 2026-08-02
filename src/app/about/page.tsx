@@ -151,6 +151,24 @@ export default function About() {
         </div>
       </section>
 
+      {/* Venice Beach */}
+      <section className="bg-soft-sage py-12 lg:py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden shadow-lg">
+            <Image
+              src="/brigit-venice-canal.jpg"
+              alt="Brigit Jacoby, LCSW, at the Venice canals in Venice Beach, CA"
+              fill
+              className="object-cover"
+              style={{ objectPosition: "50% 25%" }}
+            />
+          </div>
+          <p className="text-center text-stone-gray text-sm mt-4">
+            Venice Beach, CA
+          </p>
+        </div>
+      </section>
+
       {/* Credentials */}
       <section className="bg-warm-cream py-12 lg:py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
