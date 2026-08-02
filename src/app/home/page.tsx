@@ -238,8 +238,8 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="hidden lg:block relative">
               <Image
-                src="/brigit-landing.jpg"
-                alt="Brigit Jacoby, LCSW, Licensed Clinical Social Worker in Venice Beach, CA"
+                src="/brigit-and-marshall.jpg"
+                alt="Brigit Jacoby, LCSW, Licensed Clinical Social Worker in Venice Beach, CA, with her dog, Marshall"
                 width={480}
                 height={720}
                 className="rounded-2xl shadow-lg object-cover w-full"

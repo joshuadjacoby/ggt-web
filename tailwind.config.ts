@@ -9,12 +9,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        "sage-teal": "#1D9E75",
-        "deep-teal": "#0F6E56",
-        "soft-sage": "#E1F5EE",
+        "sage-teal": "#C1613E",
+        "deep-teal": "#2A3648",
+        "soft-sage": "#F0E6DC",
         "warm-cream": "#F7F5F0",
         charcoal: "#2C2C2A",
-        "stone-gray": "#888780",
+        "stone-gray": "#8A8073",
       },
       fontFamily: {
         georgia: ["Georgia", "'Times New Roman'", "serif"],
