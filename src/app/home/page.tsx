@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title:
-    "Brigit Jacoby, LCSW | Anxiety Therapist in Los Angeles & Santa Monica",
+    "Brigit Jacoby, LCSW | Anxiety & Burnout Therapist in Venice Beach, CA",
   description:
-    "Virtual therapy for high-achieving adults in Los Angeles. Specializing in anxiety, people-pleasing, and authentic relationships. Book a free 20-minute consultation.",
+    "Virtual therapy for high-achieving adults in Venice Beach, Santa Monica, and Los Angeles. Specializing in anxiety, burnout, people-pleasing, and authentic relationships. Book a free 20-minute consultation.",
 };
 
 const testimonials = [
@@ -56,8 +56,8 @@ const expectations = [
 
 const services = [
   {
-    title: "Anxiety & High-Functioning Stress",
-    body: "For the person who can't slow down, over-prepares for everything, and always feels like the other shoe is about to drop.",
+    title: "Anxiety, Stress & Burnout",
+    body: "For the person who can't slow down, over-prepares for everything, and always feels like the other shoe is about to drop — even when it looks like burnout from the outside.",
     href: "/services#anxiety",
   },
   {
@@ -86,7 +86,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
               <p className="text-xs font-medium tracking-widest text-sage-teal uppercase mb-4">
-                Anxiety Therapist · Venice Beach · Virtual Throughout California
+                Anxiety &amp; Burnout Therapist · Venice Beach · Virtual Throughout California
               </p>
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold italic text-charcoal leading-tight mb-4 sm:mb-6">
                 A space to stop performing and start living.
@@ -97,9 +97,10 @@ export default function Home() {
                 of anxiety that never quite goes away.
               </p>
               <p className="text-base sm:text-lg text-stone-gray leading-relaxed mb-6 sm:mb-10">
-                I help high-achieving adults in Los Angeles untangle anxiety,
-                let go of people-pleasing patterns, and find the voice
-                they&apos;ve been keeping to themselves.
+                I help high-achieving adults in Venice Beach and across Los
+                Angeles untangle anxiety and burnout, let go of
+                people-pleasing patterns, and find the voice they&apos;ve
+                been keeping to themselves.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link href="/contact" className="btn-primary text-center">

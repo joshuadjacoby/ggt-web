@@ -3,17 +3,17 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Teen Therapy in Los Angeles & Santa Monica | Brigit Jacoby, LCSW",
+  title: "Teen & Family Therapy in Venice Beach, CA",
   description:
-    "A therapist who asks questions and guides the process — not one who expects your teen to lead the conversation. Virtual and in-person sessions for teens and families in Los Angeles, Santa Monica, and Venice Beach.",
+    "A therapist who asks questions and guides the process — not one who expects your teen to lead the conversation. Virtual and in-person sessions for teens and families in Venice Beach, Santa Monica, and Los Angeles.",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://brigitjacoby.com/teens",
     siteName: "Brigit Jacoby, LCSW",
-    title: "Teen Therapy in Los Angeles & Santa Monica | Brigit Jacoby, LCSW",
+    title: "Teen & Family Therapy in Venice Beach, CA",
     description:
-      "A therapist who asks questions and guides the process — not one who expects your teen to lead the conversation. Virtual and in-person sessions for teens and families in Los Angeles, Santa Monica, and Venice Beach.",
+      "A therapist who asks questions and guides the process — not one who expects your teen to lead the conversation. Virtual and in-person sessions for teens and families in Venice Beach, Santa Monica, and Los Angeles.",
     images: ["/og-image.jpg"],
   },
 };
