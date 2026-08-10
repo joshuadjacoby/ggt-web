@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
-const title = "About | Anxiety & Burnout Therapist in Venice Beach, CA";
+const title = "About | Anxiety Therapist in Venice Beach, CA";
 const description =
-  "Meet Brigit Jacoby, LCSW — a Licensed Clinical Social Worker in Venice Beach specializing in anxiety, burnout, and people-pleasing therapy for high-achieving adults throughout California.";
+  "Meet Brigit Jacoby, LCSW — a Licensed Clinical Social Worker in Venice Beach specializing in anxiety and people-pleasing therapy for high-achieving adults throughout California.";
 
 export const metadata: Metadata = {
   title,
@@ -198,7 +198,7 @@ export default function About() {
             commitment.
           </p>
           <Link href="/contact" className="btn-white">
-            Schedule a Free Consultation →
+            Book a Free Consultation →
           </Link>
         </div>
       </section>

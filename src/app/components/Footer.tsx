@@ -12,9 +12,9 @@ export default function Footer() {
               Licensed Clinical Social Worker #121726
             </p>
             <p className="text-stone-gray text-sm leading-relaxed">
-              Anxiety &amp; burnout therapist based in Venice Beach, serving
-              Santa Monica and the LA Westside — plus virtual sessions
-              throughout California.
+              Anxiety therapist based in Venice Beach, serving Santa Monica
+              and the LA Westside — plus virtual sessions throughout
+              California.
             </p>
           </div>
 

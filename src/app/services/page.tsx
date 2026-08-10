@@ -193,7 +193,7 @@ export default function Services() {
             just a chance to see if we&apos;re a good fit.
           </p>
           <Link href="/contact" className="btn-white">
-            Book a Free 20-Minute Consultation →
+            Book a Free Consultation →
           </Link>
         </div>
       </section>
