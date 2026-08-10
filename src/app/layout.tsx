@@ -7,18 +7,21 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://brigitjacoby.com"),
   title: {
     default:
-      "Brigit Jacoby, LCSW | Anxiety Therapist in Los Angeles & Santa Monica",
+      "Brigit Jacoby, LCSW | Anxiety & Burnout Therapist in Venice Beach, CA",
     template: "%s | Brigit Jacoby, LCSW",
   },
   description:
-    "Virtual therapy for high-achieving adults in Los Angeles. Specializing in anxiety, people-pleasing, and authentic relationships. Book a free 20-minute consultation.",
+    "Virtual therapy for high-achieving adults in Venice Beach, Santa Monica, and Los Angeles. Specializing in anxiety, burnout, people-pleasing, and authentic relationships. Book a free 20-minute consultation.",
   keywords: [
+    "anxiety therapist Venice Beach",
+    "burnout therapist Venice Beach",
+    "therapist Venice Beach CA",
     "anxiety therapist Los Angeles",
+    "burnout recovery Los Angeles",
     "therapist for high achievers",
     "people-pleasing therapy Santa Monica",
     "virtual therapy California",
     "LCSW Santa Monica",
-    "therapy for anxiety Westside LA",
     "boundaries therapist Los Angeles",
     "high-functioning anxiety therapy",
     "authentic relationships therapy",
@@ -30,9 +33,9 @@ export const metadata: Metadata = {
     url: "https://brigitjacoby.com",
     siteName: "Brigit Jacoby, LCSW",
     title:
-      "Brigit Jacoby, LCSW | Anxiety Therapist in Los Angeles & Santa Monica",
+      "Brigit Jacoby, LCSW | Anxiety & Burnout Therapist in Venice Beach, CA",
     description:
-      "Virtual therapy for high-achieving adults in Los Angeles. Specializing in anxiety, people-pleasing, and authentic relationships.",
+      "Virtual therapy for high-achieving adults in Venice Beach, Santa Monica, and Los Angeles. Specializing in anxiety, burnout, people-pleasing, and authentic relationships.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -46,7 +49,7 @@ const jsonLd = {
   "@type": "MedicalBusiness",
   name: "Brigit Jacoby, LCSW",
   description:
-    "Virtual therapy for high-achieving adults in California specializing in anxiety and people-pleasing.",
+    "Virtual therapy for high-achieving adults in Venice Beach and throughout California, specializing in anxiety, burnout, and people-pleasing.",
   url: "https://brigitjacoby.com",
   telephone: "(310) 561-1461",
   email: "brigit@goldengatetherapy.com",

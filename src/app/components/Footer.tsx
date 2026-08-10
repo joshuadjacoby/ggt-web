@@ -12,8 +12,8 @@ export default function Footer() {
               Licensed Clinical Social Worker #121726
             </p>
             <p className="text-stone-gray text-sm leading-relaxed">
-              Venice Beach therapist serving Santa Monica, Marina del Rey, Mar
-              Vista, Brentwood, and the LA Westside — plus virtual sessions
+              Anxiety &amp; burnout therapist based in Venice Beach, serving
+              Santa Monica and the LA Westside — plus virtual sessions
               throughout California.
             </p>
           </div>
@@ -83,10 +83,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Brigit Jacoby, LCSW. All rights
             reserved.
           </p>
-          <p>
-            Venice Beach, CA · Serving Santa Monica, Marina del Rey, Mar
-            Vista &amp; Brentwood · Virtual throughout California
-          </p>
+          <p>Venice Beach, CA · Virtual throughout California</p>
         </div>
       </div>
     </footer>

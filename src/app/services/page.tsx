@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 const title =
-  "Therapy Services | Anxiety, People-Pleasing & Boundaries | Los Angeles";
+  "Anxiety, Burnout & People-Pleasing Therapy in Venice Beach, CA";
 const description =
-  "Individual therapy for high-achieving adults. Brigit Jacoby, LCSW offers virtual sessions throughout California for anxiety, people-pleasing, boundaries, and authentic relationships.";
+  "Individual therapy for high-achieving adults in Venice Beach, Santa Monica, and Los Angeles. Brigit Jacoby, LCSW offers virtual sessions throughout California for anxiety, burnout, people-pleasing, boundaries, and authentic relationships.";
 
 export const metadata: Metadata = {
   title,
@@ -23,17 +23,26 @@ export const metadata: Metadata = {
 const services = [
   {
     id: "anxiety",
-    title: "Anxiety & High-Functioning Stress",
+    title: "Anxiety, Stress & Burnout",
     subtitle: "For the person who can't seem to slow down",
-    body: "Anxiety doesn't always look like panic attacks. For high achievers, it often shows up as the inability to slow down, constant over-preparation, a nagging sense that the other shoe is about to drop, or the relentless feeling that you're not doing enough — even when you're doing everything. We'll work to understand what your anxiety is trying to protect you from, and help you build a different relationship with it.",
-    keywords: ["high-functioning anxiety therapy", "anxiety therapist Los Angeles"],
+    body: "Anxiety doesn't always look like panic attacks. For high achievers, it often shows up as the inability to slow down, constant over-preparation, a nagging sense that the other shoe is about to drop, or the relentless feeling that you're not doing enough — even when you're doing everything. Left unchecked, that pattern is often what burnout looks like from the inside. We'll work to understand what your anxiety is trying to protect you from, and help you build a different relationship with it.",
+    keywords: [
+      "anxiety therapist Venice Beach",
+      "burnout therapist Venice Beach",
+      "high-functioning anxiety therapy",
+      "anxiety therapist Los Angeles",
+    ],
   },
   {
     id: "people-pleasing",
     title: "People-Pleasing & Boundaries",
     subtitle: "For the person who always puts everyone else first",
     body: "If you've spent your life making sure everyone else is okay — at the expense of your own needs, time, and sometimes sense of self — this work is for you. Together we'll explore where that pattern came from, what it's costing you, and how to start saying what you actually mean without the guilt spiral that usually follows.",
-    keywords: ["people-pleasing therapy Santa Monica", "boundaries therapist Los Angeles"],
+    keywords: [
+      "people-pleasing therapy Venice Beach",
+      "people-pleasing therapy Santa Monica",
+      "boundaries therapist Los Angeles",
+    ],
   },
   {
     id: "voice",
