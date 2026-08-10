@@ -6,7 +6,7 @@ import { PostCard, type PostCardData } from "./components/PostCard";
 export const metadata: Metadata = {
   title: "Blog | Anxiety, People-Pleasing & Boundaries",
   description:
-    "Insights on anxiety, people-pleasing, and building authentic relationships from Brigit Jacoby, LCSW — a therapist for high-achieving adults in Los Angeles.",
+    "Insights on anxiety, people-pleasing, and building authentic relationships from Brigit Jacoby, LCSW — a therapist for high-achieving adults, teens, and families in Los Angeles.",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -35,8 +35,8 @@ export default async function BlogIndex() {
             Thoughts on anxiety, people-pleasing, and being seen.
           </h1>
           <p className="text-base sm:text-lg text-stone-gray leading-relaxed">
-            Practical, honest writing for high-achieving adults untangling
-            the patterns that keep them stuck.
+            Practical, honest writing on anxiety and people-pleasing — for
+            high-achieving adults, teens, and the families supporting them.
           </p>
         </div>
       </section>
