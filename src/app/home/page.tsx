@@ -66,7 +66,7 @@ const services = [
     href: "/services#people-pleasing",
   },
   {
-    title: "Finding Your Authentic Voice",
+    title: "Finding Your Voice & Authentic Expression",
     body: "For the person who's excellent at communicating — but struggles to speak honestly about what they feel or what they need.",
     href: "/services#voice",
   },
@@ -86,7 +86,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div>
               <p className="text-xs font-medium tracking-widest text-sage-teal uppercase mb-4">
-                Anxiety &amp; Burnout Therapist · Venice Beach · Virtual Throughout California
+                Anxiety Therapist · Venice Beach · Virtual Throughout California
               </p>
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold italic text-charcoal leading-tight mb-4 sm:mb-6">
                 A space to stop performing and start living.
@@ -98,9 +98,8 @@ export default function Home() {
               </p>
               <p className="text-base sm:text-lg text-stone-gray leading-relaxed mb-6 sm:mb-10">
                 I help high-achieving adults in Venice Beach and across Los
-                Angeles untangle anxiety and burnout, let go of
-                people-pleasing patterns, and find the voice they&apos;ve
-                been keeping to themselves.
+                Angeles untangle anxiety, let go of people-pleasing patterns,
+                and find the voice they&apos;ve been keeping to themselves.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link href="/contact" className="btn-primary text-center">
@@ -259,17 +258,18 @@ export default function Home() {
                 performing and ready to actually live.
               </p>
               <p className="text-stone-gray leading-relaxed mb-4">
-                My clients are smart, self-aware, and often their own harshest
-                critics. They come to therapy not because they&apos;re falling
-                apart, but because something quieter is happening: a growing
-                disconnection between who they are and how they&apos;re living.
+                Most of my clients aren&apos;t in crisis — they&apos;re
+                successful by every visible measure. What brings them in is
+                quieter: the sense that they&apos;re managing their life more
+                than living it.
               </p>
               <p className="text-stone-gray leading-relaxed mb-8">
-                Therapy works when you feel safe enough to be honest, so
-                that&apos;s always where we start.
+                I bring a warm, direct approach grounded in evidence-based
+                practice, and a genuine belief that you don&apos;t have to
+                have it all figured out to start.
               </p>
               <Link href="/about" className="btn-primary">
-                More About Me & My Approach →
+                More About Me &amp; My Approach →
               </Link>
             </div>
           </div>
@@ -323,7 +323,7 @@ export default function Home() {
             you, how I work, and whether it feels like a match.
           </p>
           <Link href="/contact" className="btn-white">
-            Book Your Free Consultation →
+            Book a Free Consultation →
           </Link>
         </div>
       </section>

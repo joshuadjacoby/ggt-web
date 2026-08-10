@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 
 const title = "Book a Free Consultation";
 const description =
-  "Ready to take the first step? Book a free 20-minute consultation with Brigit Jacoby, LCSW — anxiety and burnout therapist in Venice Beach, Santa Monica, and Los Angeles. No pressure, no commitment.";
+  "Ready to take the first step? Book a free 20-minute consultation with Brigit Jacoby, LCSW — anxiety therapist in Venice Beach, Santa Monica, and Los Angeles. No pressure, no commitment.";
 
 export const metadata: Metadata = {
   title,

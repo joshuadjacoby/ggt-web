@@ -49,7 +49,7 @@ export default function ContactForm() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    if (!formData.first_name || !formData.last_name || !formData.email || !formData.message) {
+    if (!formData.first_name || !formData.last_name || !formData.email) {
       toast.error("Please fill out all fields.");
       return;
     }
