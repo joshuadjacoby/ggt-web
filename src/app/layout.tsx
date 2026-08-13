@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | Brigit Jacoby, LCSW",
   },
   description:
-    "Virtual therapy for high-achieving adults in Venice Beach, Santa Monica, and Los Angeles. Specializing in anxiety, burnout, people-pleasing, and authentic relationships. Book a free 20-minute consultation.",
+    "Virtual therapy for high-achieving adults, teens, and the families supporting them in Venice Beach, Santa Monica, and Los Angeles. Specializing in anxiety, burnout, people-pleasing, and authentic relationships. Book a free 20-minute consultation.",
   keywords: [
     "anxiety therapist Venice Beach",
     "burnout therapist Venice Beach",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title:
       "Brigit Jacoby, LCSW | Anxiety & Burnout Therapist in Venice Beach, CA",
     description:
-      "Virtual therapy for high-achieving adults in Venice Beach, Santa Monica, and Los Angeles. Specializing in anxiety, burnout, people-pleasing, and authentic relationships.",
+      "Virtual therapy for high-achieving adults, teens, and the families supporting them in Venice Beach, Santa Monica, and Los Angeles. Specializing in anxiety, burnout, people-pleasing, and authentic relationships.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -49,7 +49,7 @@ const jsonLd = {
   "@type": "MedicalBusiness",
   name: "Brigit Jacoby, LCSW",
   description:
-    "Virtual therapy for high-achieving adults in Venice Beach and throughout California, specializing in anxiety, burnout, and people-pleasing.",
+    "Virtual therapy for high-achieving adults, teens, and the families supporting them in Venice Beach and throughout California, specializing in anxiety, burnout, and people-pleasing.",
   url: "https://brigitjacoby.com",
   telephone: "(310) 561-1461",
   email: "brigit@goldengatetherapy.com",
@@ -64,12 +64,11 @@ const jsonLd = {
     { "@type": "City", name: "Santa Monica" },
     { "@type": "City", name: "Marina del Rey" },
     { "@type": "City", name: "Mar Vista" },
-    { "@type": "City", name: "Brentwood" },
+    { "@type": "City", name: "Playa Vista" },
     { "@type": "City", name: "Los Angeles" },
     { "@type": "State", name: "California" },
   ],
   priceRange: "$$",
-  medicalSpecialty: "Psychiatry",
   sameAs: ["https://www.psychologytoday.com/profile/1352154"],
   founder: {
     "@type": "Person",

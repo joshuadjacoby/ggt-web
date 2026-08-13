@@ -48,6 +48,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title,
     description,
+    alternates: {
+      canonical: `https://brigitjacoby.com/blog/${post.slug}`,
+    },
     openGraph: {
       type: "article",
       locale: "en_US",
