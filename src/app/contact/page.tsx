@@ -9,6 +9,9 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
+  alternates: {
+    canonical: "https://brigitjacoby.com/contact",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

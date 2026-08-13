@@ -2,18 +2,23 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
+const title = "Teen & Family Therapy in Venice Beach, Playa Vista & Mar Vista";
+const description =
+  "A therapist who asks questions and guides the process — not one who expects your teen to lead the conversation. Virtual and in-person sessions for teens and families in Venice Beach, Mar Vista, Playa Vista, and Santa Monica.";
+
 export const metadata: Metadata = {
-  title: "Teen & Family Therapy in Venice Beach, CA",
-  description:
-    "A therapist who asks questions and guides the process — not one who expects your teen to lead the conversation. Virtual and in-person sessions for teens and families in Venice Beach, Santa Monica, and Los Angeles.",
+  title,
+  description,
+  alternates: {
+    canonical: "https://brigitjacoby.com/teens",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://brigitjacoby.com/teens",
     siteName: "Brigit Jacoby, LCSW",
-    title: "Teen & Family Therapy in Venice Beach, CA",
-    description:
-      "A therapist who asks questions and guides the process — not one who expects your teen to lead the conversation. Virtual and in-person sessions for teens and families in Venice Beach, Santa Monica, and Los Angeles.",
+    title,
+    description,
     images: ["/og-image.jpg"],
   },
 };

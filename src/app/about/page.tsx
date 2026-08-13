@@ -4,11 +4,14 @@ import Image from "next/image";
 
 const title = "About | Anxiety Therapist in Venice Beach, CA";
 const description =
-  "Meet Brigit Jacoby, LCSW — a Licensed Clinical Social Worker in Venice Beach specializing in anxiety and people-pleasing therapy for high-achieving adults throughout California.";
+  "Meet Brigit Jacoby, LCSW — a Licensed Clinical Social Worker in Venice Beach specializing in anxiety and people-pleasing therapy for high-achieving adults, teens, and the families supporting them throughout California.";
 
 export const metadata: Metadata = {
   title,
   description,
+  alternates: {
+    canonical: "https://brigitjacoby.com/about",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

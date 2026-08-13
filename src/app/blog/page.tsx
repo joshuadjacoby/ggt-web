@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Blog | Anxiety, People-Pleasing & Boundaries",
   description:
     "Insights on anxiety, people-pleasing, and building authentic relationships from Brigit Jacoby, LCSW — a therapist for high-achieving adults, teens, and families in Los Angeles.",
+  alternates: {
+    canonical: "https://brigitjacoby.com/blog",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",

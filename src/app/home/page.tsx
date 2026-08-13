@@ -3,10 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title:
-    "Brigit Jacoby, LCSW | Anxiety & Burnout Therapist in Venice Beach, CA",
+  title: "Anxiety & Burnout Therapist in Venice Beach, CA",
   description:
-    "Virtual therapy for high-achieving adults in Venice Beach, Santa Monica, and Los Angeles. Specializing in anxiety, burnout, people-pleasing, and authentic relationships. Book a free 20-minute consultation.",
+    "Virtual therapy for high-achieving adults, teens, and the families supporting them in Venice Beach, Santa Monica, and Los Angeles. Specializing in anxiety, burnout, people-pleasing, and authentic relationships. Book a free 20-minute consultation.",
+  alternates: {
+    canonical: "https://brigitjacoby.com/",
+  },
 };
 
 const testimonials = [
@@ -97,9 +99,10 @@ export default function Home() {
                 of anxiety that never quite goes away.
               </p>
               <p className="text-base sm:text-lg text-stone-gray leading-relaxed mb-6 sm:mb-10">
-                I help high-achieving adults in Venice Beach and across Los
-                Angeles untangle anxiety, let go of people-pleasing patterns,
-                and find the voice they&apos;ve been keeping to themselves.
+                I help high-achieving adults, teens, and the families
+                supporting them in Venice Beach and across Los Angeles
+                untangle anxiety, let go of people-pleasing patterns, and
+                find the voice they&apos;ve been keeping to themselves.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link href="/contact" className="btn-primary text-center">
