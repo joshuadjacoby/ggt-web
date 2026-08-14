@@ -87,10 +87,10 @@ JS/TSX content in `src/app/**/page.tsx` — edit and redeploy.
   `title` string and let the template append the brand name — don't
   hardcode "| Brigit Jacoby, LCSW" onto a page's own title, or it renders
   twice (this happened before; see PR #18/#19 history).
-- The `/teens` page is deliberately excluded from the main nav (it's in the
-  footer + sitemap instead) — it's a distinct-audience landing page that
-  would dilute the adult-focused homepage identity if promoted equally in
-  primary nav.
+- The `/teens` page is included in the main nav ("Teens & Families") — as of
+  PR #21 the site's positioning intentionally spans adults, teens, and the
+  families supporting them, so the page is promoted alongside About,
+  Services, Blog, and Contact rather than tucked into the footer only.
 
 ## Deployment
 
