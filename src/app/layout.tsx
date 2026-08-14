@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://brigitjacoby.com"),
   title: {
     default:
-      "Brigit Jacoby, LCSW | Anxiety & Burnout Therapist in Venice Beach, CA",
+      "Brigit Jacoby, LCSW | Anxiety Therapist for Adults & Teens in Venice Beach, CA",
     template: "%s | Brigit Jacoby, LCSW",
   },
   description:
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "https://brigitjacoby.com",
     siteName: "Brigit Jacoby, LCSW",
     title:
-      "Brigit Jacoby, LCSW | Anxiety & Burnout Therapist in Venice Beach, CA",
+      "Brigit Jacoby, LCSW | Anxiety Therapist for Adults & Teens in Venice Beach, CA",
     description:
       "Virtual therapy for high-achieving adults, teens, and the families supporting them in Venice Beach, Santa Monica, and Los Angeles. Specializing in anxiety, burnout, people-pleasing, and authentic relationships.",
     images: ["/og-image.jpg"],

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Anxiety & Burnout Therapist in Venice Beach, CA",
+  title: "Anxiety Therapist for Adults & Teens in Venice Beach, CA",
   description:
     "Virtual therapy for high-achieving adults, teens, and the families supporting them in Venice Beach, Santa Monica, and Los Angeles. Specializing in anxiety, burnout, people-pleasing, and authentic relationships. Book a free 20-minute consultation.",
   alternates: {
