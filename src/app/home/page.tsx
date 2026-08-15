@@ -100,9 +100,10 @@ export default function Home() {
               </p>
               <p className="text-base sm:text-lg text-stone-gray leading-relaxed mb-6 sm:mb-10">
                 I help high-achieving adults, teens, and the families
-                supporting them in Venice Beach and across Los Angeles
-                untangle anxiety, let go of people-pleasing patterns, and
-                find the voice they&apos;ve been keeping to themselves.
+                supporting them in Venice Beach, Santa Monica, and the
+                Westside untangle anxiety, let go of people-pleasing
+                patterns, and find the voice they&apos;ve been keeping to
+                themselves.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <Link href="/contact" className="btn-primary text-center">
