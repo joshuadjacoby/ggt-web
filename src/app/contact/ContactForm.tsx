@@ -103,10 +103,10 @@ export default function ContactForm() {
                 <p className="text-sm text-charcoal">
                   <span className="font-medium">Phone:</span>{" "}
                   <a
-                    href="tel:3105611461"
+                    href="tel:3109169563"
                     className="text-sage-teal hover:underline"
                   >
-                    (310) 561-1461
+                    (310) 916-9563
                   </a>
                 </p>
                 <p className="text-sm text-charcoal">

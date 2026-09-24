@@ -256,10 +256,10 @@ export default function Teens() {
             </p>
             <p>
               <a
-                href="tel:3105611461"
+                href="tel:3109169563"
                 className="hover:text-white transition-colors"
               >
-                (310) 561-1461
+                (310) 916-9563
               </a>
             </p>
           </div>
