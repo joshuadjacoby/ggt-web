@@ -51,7 +51,7 @@ const jsonLd = {
   description:
     "Virtual therapy for high-achieving adults, teens, and the families supporting them in Venice Beach and throughout California, specializing in anxiety, burnout, and people-pleasing.",
   url: "https://brigitjacoby.com",
-  telephone: "(310) 561-1461",
+  telephone: "(310) 916-9563",
   email: "brigit@goldengatetherapy.com",
   address: {
     "@type": "PostalAddress",

@@ -59,8 +59,8 @@ export default function Footer() {
               </a>
             </p>
             <p className="text-sm text-stone-gray mb-6">
-              <a href="tel:3105611461" className="hover:text-white transition-colors">
-                (310) 561-1461
+              <a href="tel:3109169563" className="hover:text-white transition-colors">
+                (310) 916-9563
               </a>
             </p>
             <a
